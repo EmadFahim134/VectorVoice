@@ -2,6 +2,10 @@
 import wave as wav
 import numpy as np
 from Modules import Synth
+from colorama import init, Fore, Back, Style
+
+# init colorama:
+init ()
 
 # Sturcterd Start:
 def save_wav(filename, audio_data, sample_rate=44100):
@@ -21,10 +25,10 @@ def save_wav(filename, audio_data, sample_rate=44100):
 
 
 def main():
-    print("--- TTS Engine Initialized ---")
+    print(Fore.BLUE, '____VECTORVOICE OPENING____')
 
     # User Input:
-    user_input = "himynameisemad"
+    user_input = ""
     print(f"Processing text: '{user_input}'")
 
     # Runing text through "Synth.py" module.
@@ -42,7 +46,7 @@ def main():
             "\n Done! Look at your Zed file tree. Open 'output.wav' to hear your creation!"
         )
     else:
-        print("Failed to generate audio.")
+        print(Style.BRIGHT + Fore.RED ,"Fail to generate output.wav")
 
 
 if __name__ == "__main__":
