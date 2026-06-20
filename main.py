@@ -1,10 +1,7 @@
 # import Modules & Libraries:
 import wave as wav
-
 import numpy as np
-
-from Synth import synth_text
-
+from Modules import Synth
 
 # Sturcterd Start:
 def save_wav(filename, audio_data, sample_rate=44100):
@@ -31,7 +28,7 @@ def main():
     print(f"Processing text: '{user_input}'")
 
     # Runing text through "Synth.py" module.
-    final_audio = synth_text(user_input)
+    final_audio = Synth.synth_text(user_input)
 
     if final_audio is not None:
         print(
