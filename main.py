@@ -9,10 +9,6 @@ init ()
 
 # Sturcterd Start:
 def save_wav(filename, audio_data, sample_rate=44100):
-    """
-    Converts floating-point audio data into a standard 16-bit
-    PCM WAV file that any media player can read.
-    """
     # 1. Scale decimals (-1.0 to 1.0) to 16-bit integers (-32767 to 32767)
     audio_data_int16 = (audio_data * 32767).astype(np.int16)
 
@@ -28,7 +24,7 @@ def main():
     print(Fore.BLUE, '____VECTORVOICE OPENING____')
 
     # User Input:
-    user_input = ""
+    user_input = "Nigger"
     print(f"Processing text: '{user_input}'")
 
     # Runing text through "Synth.py" module.

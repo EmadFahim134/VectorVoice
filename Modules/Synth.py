@@ -5,7 +5,7 @@ import pandas as pd
 from Modules import audio_engine
 
 # Reading Data:
-df = pd.read_csv("data.csv", index_col="Character")
+df = pd.read_csv("Data/data.csv", index_col="Character")
 
 
 # Main code
